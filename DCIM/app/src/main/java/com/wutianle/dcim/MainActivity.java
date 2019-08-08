@@ -2,6 +2,7 @@ package com.wutianle.dcim;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.provider.MediaStore;
@@ -38,49 +39,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.button1).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toDelFileDCIM();
+            }
+        });
 
-//    /**
-//     * 将assets文件夹下的文件拷贝到/data/data/下
-//     *
-//     * @param context
-//     * @param fileName
-//     */
-//    private void copyDbFile(Context context, String fileName) {
-//        InputStream in = null;
-//        FileOutputStream out = null;
-//        String path = "/sdcard/DCIM/.thumbnails/" + context.getPackageName() + "/audiofile/";
-//        File file = new File(path + fileName);
-//
-//        //创建文件夹
-//        File filePath = new File(path);
-//        if (!filePath.exists())
-//            filePath.mkdirs();
-//
-//        if (file.exists())
-//            return;
-//
-//        try {
-//            in = context.getAssets().open(fileName); // 从assets目录下复制
-//            out = new FileOutputStream(file);
-//            int length = -1;
-//            byte[] buf = new byte[1024];
-//            while ((length = in.read(buf)) != -1) {
-//                out.write(buf, 0, length);
-//            }
-//            out.flush();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        } finally {
-//            try {
-//                if (in != null) in.close();
-//                if (out != null) out.close();
-//            } catch (IOException e1) {
-//                e1.printStackTrace();
-//            }
-//        }
-//    }}
     }
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -88,15 +54,16 @@ public class MainActivity extends AppCompatActivity {
             if (checkWriteStoragePermission()) {
                 toWriteFileDCIM();
             }
+            }
         }
-
-
-    }
 
     private static String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE};
-
+    private void toDelFileDCIM(){
+        Intent intent = new Intent(MainActivity.this,DelDcim.class);
+                startActivity(intent);
+    }
 
     private void toWriteFileDCIM() {
         if (!checkWriteStoragePermission()) {
@@ -131,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
     private boolean checkWriteStoragePermission() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
