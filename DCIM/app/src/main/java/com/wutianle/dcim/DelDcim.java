@@ -1,5 +1,6 @@
 package com.wutianle.dcim;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,9 +16,15 @@ public class DelDcim extends AppCompatActivity {
         findViewById(R.id.buttondel).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Pig_bosst();
             }
         });
+    }
+
+
+    public void Pig_bosst(){
+        Intent intent = new Intent(DelDcim.this,MainActivity.class);
+        startActivity(intent);
 
     }
 }

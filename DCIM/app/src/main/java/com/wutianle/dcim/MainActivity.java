@@ -44,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.button2).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toMkdirsystem();
+            }
+        });
+
     }
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -58,6 +65,12 @@ public class MainActivity extends AppCompatActivity {
     private static String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE};
+
+    private void toMkdirsystem(){
+        Intent intent = new Intent(MainActivity.this,Mkdir_system_junkfile.class);
+                startActivity(intent);
+    }
+
     private void toDelFileDCIM(){
         Intent intent = new Intent(MainActivity.this,DelDcim.class);
                 startActivity(intent);
