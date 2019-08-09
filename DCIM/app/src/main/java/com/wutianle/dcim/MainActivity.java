@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.support.v4.content.PermissionChecker;
 import android.provider.MediaStore;
 import android.content.Context;
+import android.widget.Toast;
+
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
@@ -103,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
             //关闭输入流等（略）
             fos.close();
             is.close();
+            Toast.makeText(MainActivity.this, "DCIM 目录图片导入成功", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();
         }

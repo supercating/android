@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="用来写入系统文件"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="用来写入系统文件"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
 
     <Button
         android:id="@+id/button"
@@ -37,7 +37,7 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="111dp"
-        android:layout_marginTop="182dp"
+        android:layout_marginTop="102dp"
         android:layout_marginEnd="111dp"
         android:layout_marginBottom="208dp"
         android:text="DEL_DCIM"
@@ -53,7 +53,7 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="111dp"
-        android:layout_marginTop="337dp"
+        android:layout_marginTop="172dp"
         android:layout_marginEnd="111dp"
         android:layout_marginBottom="208dp"
         android:text="System"

@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Mkdir_system_junkfile">
 
+    <Button
+        android:id="@+id/tost_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="230dp"
+        tools:text="tost" />
 </android.support.constraint.ConstraintLayout>
