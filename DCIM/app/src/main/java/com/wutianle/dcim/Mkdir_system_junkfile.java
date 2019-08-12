@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-public class Mkdir_system_junkfile extends AppCompatActivity {
+public class Mkdir_system_junkfile extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

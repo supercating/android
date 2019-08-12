@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".JinduTiao"></activity>
+        <activity android:name=".JinduTiao"/>
         <activity android:name=".Mkdir_system_junkfile" />
         <activity android:name=".DelDcim" />
         <activity android:name=".MainActivity">

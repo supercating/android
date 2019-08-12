@@ -10,7 +10,7 @@
         android:id="@+id/tost_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="进度条入口"
         tools:layout_editor_absoluteX="174dp"
         tools:layout_editor_absoluteY="230dp"
         tools:text="tost" />
