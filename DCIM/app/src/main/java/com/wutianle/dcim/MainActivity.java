@@ -1,6 +1,7 @@
 package com.wutianle.dcim;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -14,6 +15,7 @@ import java.io.InputStream;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.support.v4.content.PermissionChecker;
 import android.provider.MediaStore;
@@ -25,6 +27,7 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_PERMISSION_CODE = 20001;
+    private Activity alert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.button3).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spikInstall();
+            }
+        });
+
+        findViewById(R.id.button4).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toDailog();
+
+            }
+        });
+
     }
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -75,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void toDelFileDCIM(){
         Intent intent = new Intent(MainActivity.this,DelDcim.class);
+                startActivity(intent);
+    }
+
+    private void toDailog(){
+        Intent intent = new Intent(MainActivity.this,activity_daylog.class);
                 startActivity(intent);
     }
 
@@ -109,8 +132,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
 
@@ -123,5 +144,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    private void spikInstall(){
+        alert.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+        
+
     }
 }

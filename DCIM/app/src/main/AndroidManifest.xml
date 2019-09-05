@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.wutianle.dcim">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -14,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".JinduTiao"/>
+        <activity android:name=".activity_daylog"></activity>
+        <activity android:name=".JinduTiao" />
         <activity android:name=".Mkdir_system_junkfile" />
         <activity android:name=".DelDcim" />
         <activity android:name=".MainActivity">

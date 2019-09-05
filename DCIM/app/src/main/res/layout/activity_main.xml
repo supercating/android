@@ -65,4 +65,44 @@
         app:layout_constraintVertical_bias="0.52" />
 
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="242dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="208dp"
+        android:text="监控安装弹窗"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="312dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="208dp"
+        android:text="这是dialog"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Switch
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </android.support.constraint.ConstraintLayout>
