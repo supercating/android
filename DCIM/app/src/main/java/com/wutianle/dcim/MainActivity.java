@@ -31,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        findViewById(R.id.button3).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toSystem_time();
+            }
+        });
 
         findViewById(R.id.button).setOnClickListener(new OnClickListener() {
             @Override
@@ -69,12 +75,17 @@ public class MainActivity extends AppCompatActivity {
             Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
     private void toMkdirsystem(){
-        Intent intent = new Intent(MainActivity.this,Mkdir_system_junkfile.class);
+        Intent intent = new Intent(MainActivity.this,JinduTiao.class);
                 startActivity(intent);
     }
 
     private void toDelFileDCIM(){
         Intent intent = new Intent(MainActivity.this,DelDcim.class);
+                startActivity(intent);
+    }
+
+    private void toSystem_time(){
+        Intent intent = new Intent(MainActivity.this,Mkdir_system_junkfile.class);
                 startActivity(intent);
     }
 

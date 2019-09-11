@@ -4,14 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Mkdir_system_junkfile">
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="填写时间"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="131dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="208dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52"
+        />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="208dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52"
+        />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="208dp"
+        android:text="确认"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52" />
 
     <Button
         android:id="@+id/tost_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="进度条入口"
-        tools:layout_editor_absoluteX="174dp"
-        tools:layout_editor_absoluteY="230dp"
-        tools:text="tost" />
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="508dp"
+        android:text="跳转进度条界面"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52"/>
+
+
+
 </android.support.constraint.ConstraintLayout>
